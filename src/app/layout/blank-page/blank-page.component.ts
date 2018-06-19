@@ -19,6 +19,7 @@ import { routerTransition } from '../../router.animations';
     templateUrl: './blank-page.component.html',
     styleUrls: ['./blank-page.component.scss'],
     animations: [routerTransition()]
+
 })
 export class BlankPageComponent implements OnInit {
 

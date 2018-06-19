@@ -1,11 +1,11 @@
 <div [@routerTransition]>
-
+    <h3 style="z-index: 1;margin-left: 200px;">Auto TDD Builder</h3>
 
 
     <div class="row justify-content-md-center">
-        <h1 style="z-index: 1;">Documentation Auto Generator</h1>
 
-        <div class="col-lg-10">
+
+        <div class="col-md-5">
             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <form (ngSubmit)="onSubmit(f)" #f="ngForm" align="center" class="form-horizontal ">
                 <div class="form-content">
@@ -13,21 +13,27 @@
                         <label class="control-label" for="exampleInputName2">SVN URL</label>
                         <input type="text" [(ngModel)]="user1.svnurl" #svnurl="ngModel" class="form-control input-underline input-lg" ngModel id="svnurl"
                             name="svnurl" required="" placeholder="SVN URL">
-                        <span class="help-block" *ngIf="svnurl.errors?.required">SVN URL is required</span>
+                        <br>
+                        <!--                         <span class="help-block" *ngIf="svnurl.errors?.required">SVN URL is required</span>
+ -->
                     </div>
 
                     <div class="form-group" [class.has-error]="user.invalid" [class.has-success]="user.valid">
                         <label class="control-label" for="exampleInputName2">Username</label>
                         <input type="text" [(ngModel)]="user1.user" #user="ngModel" class="form-control input-underline input-lg" ngModel id="user"
                             name="user" required="" placeholder="Username">
-                        <span class="help-block" *ngIf="user.errors?.required">Username is required</span>
+                        <!--                         <span class="help-block" *ngIf="user.errors?.required">Username is required</span>
+ -->
+                        <br>
                     </div>
 
                     <div class="form-group" [class.has-error]="pass.invalid" [class.has-success]="pass.valid">
                         <label class="control-label" for="exampleInputName2">Password</label>
                         <input type="password" [(ngModel)]="user1.pass" #pass="ngModel" class="form-control input-underline input-lg" id="pass" name="pass"
                             ngModel required="" placeholder="Password">
-                        <span class="help-block" *ngIf="pass.errors?.required">Password is required</span>
+                        <!--                         <span class="help-block" *ngIf="pass.errors?.required">Password is required</span>
+ -->
+                        <br>
                     </div>
 
                     <div class="form-group">
@@ -35,7 +41,8 @@
                         <input type="text" class="form-control input-underline input-lg" ngModel id="integration" name="integration" placeholder="Integration">
                     </div>
                     <br>
-                    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Build</button>
+                    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Build</button>&nbsp;
+                    <button class="btn btn-primary" type="reset">Reset</button>
                 </div>
                 <br>
 
