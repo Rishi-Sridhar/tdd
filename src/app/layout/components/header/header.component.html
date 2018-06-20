@@ -22,10 +22,12 @@
                     {{ 'Download Now' | translate }}
                 </a>
             </li> -->&nbsp;
-            <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item" [ngStyle]="{'background-color': back,'color':col}"
+                (click)="back='rgb(5,114,206)';back2='white';col='white';col2='rgb(5,114,206)'">
                 <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
             </a> &nbsp;
-            <a [routerLink]="['/process-scan-tool']" [routerLinkActive]="['router-link-active']" class="list-group-item" [hidden]='!isAuthorized'>
+            <a [routerLink]="['/process-scan-tool']" [routerLinkActive]="['router-link-active']" class="list-group-item" [hidden]='!isAuthorized'
+                (click)="back='white';back2='rgb(5,114,206)';col='rgb(5,114,206)';col2='white'" [ngStyle]="{'background-color': back2,'color':col2}">
                 <i class="fa fa-file-o"></i>&nbsp;{{ 'Auto TDD Builder' | translate }}
             </a>
             &nbsp;

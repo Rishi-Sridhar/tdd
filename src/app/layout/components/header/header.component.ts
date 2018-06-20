@@ -11,7 +11,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
     username;
     pushRightClass = 'push-right';
-
+    back;
+    back2;
+    col = 'rgb(5,114,206)';
+    col2 = 'rgb(5,114,206)';
     isAuthorized: boolean;
 
 
